@@ -1,6 +1,8 @@
 const express = require("express")
 const router = express.Router();
 
+router.get('/test', (req, res) => res.send('product route testing!'));
+
 router.post("/create-checkout-session", async (req, res) => {
     try {
       const session = await stripe.checkout.sessions.create({
