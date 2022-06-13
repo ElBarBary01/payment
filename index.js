@@ -22,8 +22,8 @@ app.post("/create-checkout-session", async (req, res) => {
         unit_amount: req.body.price *100,
       },quantity : 1}],
 
-      success_url: `https://www.rabbitmart.com/`,
-      cancel_url: `https://www.rabbitmart.com/`,
+      success_url: `https://rabbit-mart.vercel.app/`,
+      cancel_url: `https://rabbit-mart.vercel.app/`,
     })
     res.json({ url: session.url })
   } catch (e) {
